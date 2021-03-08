@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "224933181503",
+    "project_id": "biblioteca-97732",
+    "storage_bucket": "biblioteca-97732.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224933181503:android:cd63cf284158c0cee7a08a",
+        "android_client_info": {
+          "package_name": "com.elico.itschbiblioteca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224933181503-r88nc2spr0iapj487olvirda4q54tq9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG_p58XgjjfAG1Dd-6xo4Mz2tkGQtZ-dY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224933181503-r88nc2spr0iapj487olvirda4q54tq9g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
