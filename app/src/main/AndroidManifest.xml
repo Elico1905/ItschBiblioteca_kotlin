@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Mensajes" />
+        <activity android:name=".RecyclerAlumnos.Mensajes" />
         <activity android:name=".Menu" />
         <activity android:name=".Registro" />
         <activity android:name=".Login" />

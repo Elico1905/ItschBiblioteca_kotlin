@@ -199,7 +199,6 @@ class Login : AppCompatActivity() {
         val localUser: String? = prefs.getString("user", "2021ff")
         if (!localCorreo.equals("2021ff") || !localNombre.equals("2021ff") || !localApellidos.equals("2021ff")
                 || !localControl.equals("2021ff") || !localCarrera.equals("2021ff")) {
-            Toast.makeText(this, "${localUser}", Toast.LENGTH_SHORT).show()
             if (localUser.equals("A")) {
                 val intent: Intent = Intent(this, Admin::class.java)
                 startActivity(intent)
@@ -225,7 +224,6 @@ class Login : AppCompatActivity() {
 
             if (!user.equals("null")) {
                 if (user == "A") {
-                    //pasar a home admin
                     val homeIntent = Intent(this, Admin::class.java)
                     startActivity(homeIntent)
                     finish()
@@ -279,7 +277,7 @@ class Login : AppCompatActivity() {
                     GoRegistro()
                 }
                 if (cadena.equals("home")) {
-                    message("te lleva a home del admin")
+                    //message("te lleva a home del admin")
                 }
             }
         }

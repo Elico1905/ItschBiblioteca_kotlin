@@ -107,7 +107,7 @@ class Registro : AppCompatActivity() {
                     MostrarAlerta()
             }else{
 
-                RecargarAnimacion()
+                RecargarAnimacion()//
                 bd.collection("users").document(correo.text.toString()).set(
                     hashMapOf("provider" to PROVIDER,
                         "nombre" to nombre.text.toString(),

@@ -1,15 +1,14 @@
-package com.elico.itschbiblioteca
+package com.elico.itschbiblioteca.RecyclerAlumnos
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.elico.itschbiblioteca.R
 import com.elico.itschbilioteca.RecyclerAlumnos.MainAdapter
-import com.elico.itschbilioteca.RecyclerAlumnos.MainViewModel
+import com.elico.itschbiblioteca.objetos.MainViewModel
 import kotlinx.android.synthetic.main.activity_mensajes.*
 
 class Mensajes : AppCompatActivity() {
@@ -31,7 +30,7 @@ class Mensajes : AppCompatActivity() {
 
 
     fun observeData(){
-        viewModel.fetchUserData(getCorreo()).observe(this, Observer {
+        viewModel.fetchUserData(getCorreo(),"correo").observe(this, Observer {
             adapter.setListData(it)
             adapter.notifyDataSetChanged()
             if(adapter.itemCount <= 0){

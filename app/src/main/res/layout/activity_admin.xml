@@ -4,6 +4,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecyclerAdmin.Admin">
+    tools:context=".RecyclerAdmin.Admin"
+    android:background="@color/blanco_itsch">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_marginTop="-10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:scaleType="fitStart"
+            android:src="@drawable/vt_superior" />
+
+        <TextView
+            android:id="@+id/admin_head_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Hola!,  user"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:layout_marginTop="15dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="end">
+        <ImageView
+            android:id="@+id/admin_salir"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:foreground="@drawable/effect_ripple_2"
+            android:src="@drawable/ic_salir_01"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="110dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/admin_btn1"
+                android:layout_gravity="center"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="34dp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="#FFCA28">
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Solicitudes"
+                    android:textColor="@color/oculto"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+            </androidx.cardview.widget.CardView>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="0dp"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/admin_btn2"
+                android:layout_gravity="center"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="34dp"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="#FFCA28">
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reservados"
+                    android:textColor="@color/oculto"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+            </androidx.cardview.widget.CardView>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="0dp"/>
+            <ImageView
+                android:foreground="@drawable/effect_ripple_3"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/admin_mensaje"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solicitudes pendientes: 45"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:paddingBottom="7dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/admin_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:listitem="@layout/item_recycler_view_admin" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:gravity="bottom"
             android:scaleType="fitStart"
-            android:src="@drawable/ic_cabeza_02" />
+            android:src="@drawable/vt_superior" />
 
         <TextView
             android:id="@+id/head_name"
@@ -29,6 +29,14 @@
             android:textColor="#ffffff"
             android:textSize="25dp"
             android:layout_marginTop="15dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:rotationY="-180"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_inferior"/>
 
     </RelativeLayout>
 

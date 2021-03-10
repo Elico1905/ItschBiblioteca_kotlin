@@ -11,9 +11,8 @@ import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
-import androidx.cardview.widget.CardView
 import androidx.core.widget.addTextChangedListener
-import com.airbnb.lottie.LottieAnimationView
+import com.elico.itschbiblioteca.RecyclerAlumnos.Mensajes
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_menu.*
 import java.text.SimpleDateFormat
@@ -220,7 +219,8 @@ open class Menu : AppCompatActivity() {
     }
 
     private fun registrarSolicitud() {
-        bd.collection("solicitudes").document("${LeerControl()}_${getSystemData()}").set(
+        var crearID:String = "${LeerControl()}_${getSystemData()}"
+        bd.collection("solicitudes").document("${crearID}").set(
                 hashMapOf("titulo" to consulta_titulo.text.toString(),
                         "editorial" to consulta_editorial.text.toString(),
                         "autor" to consulta_autor.text.toString(),
@@ -232,7 +232,8 @@ open class Menu : AppCompatActivity() {
                         "comentario" to comentario.text.toString(),
                         "respuesta" to "",
                         "nombre_alumno" to getNombre(),
-                        "apellidos_alumno" to getApellidos()))
+                        "apellidos_alumno" to getApellidos(),
+                        "id" to "${crearID}"))
 
 
         if (estado2 == false) {
