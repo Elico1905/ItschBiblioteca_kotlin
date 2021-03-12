@@ -1,4 +1,4 @@
-package com.elico.itschbiblioteca.RecyclerAdmin
+package com.elico.itschbiblioteca.Admin.Adapters
 
 
 import android.content.Context

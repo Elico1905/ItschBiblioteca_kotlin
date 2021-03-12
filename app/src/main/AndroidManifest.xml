@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ITSCHBiblioteca">
-        <activity android:name=".RecyclerAdmin.Admin"></activity>
+        <activity android:name=".Admin.Activity_AdminViewPager"></activity>
+        <activity android:name=".RecyclerAdmin.Admin" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".objetos.SplashScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Splassh">
             <intent-filter>
@@ -25,6 +26,16 @@
         <activity android:name=".Registro" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity" />
+
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

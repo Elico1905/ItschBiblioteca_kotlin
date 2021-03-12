@@ -1,10 +1,10 @@
-package com.elico.itschbiblioteca
+package com.elico.itschbiblioteca.objetos
 
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.elico.itschbiblioteca.Login
 
 class SplashScreen : AppCompatActivity() {
 
@@ -17,14 +17,15 @@ class SplashScreen : AppCompatActivity() {
 
     private val runnable = Runnable {
         if (!isFinishing){
-            startActivity(Intent(applicationContext,Login::class.java))
+            startActivity(Intent(applicationContext, Login::class.java))
+            //startActivity(Intent(applicationContext, AdminViewPager::class.java))
             finish()
         }
     }
 
     override fun onResume() {
         super.onResume()
-        handler.postDelayed(runnable,1000)
+        handler.postDelayed(runnable,100)
     }
 
     override fun onPause() {

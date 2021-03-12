@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.fragments.Fragment02"
+    android:background="@color/blanco_itsch">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/rojo_itsch"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/admin_mensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pendientes: 10"
+                android:textAlignment="center"
+                android:textColor="@color/blanco_itsch"
+                android:textSize="23dp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:foreground="@drawable/effect_ripple_2"
+                android:src="@drawable/ic_search"
+                android:layout_marginEnd="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

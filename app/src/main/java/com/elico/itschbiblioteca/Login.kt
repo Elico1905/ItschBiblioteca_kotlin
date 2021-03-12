@@ -13,7 +13,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.airbnb.lottie.LottieAnimationView
-import com.elico.itschbiblioteca.RecyclerAdmin.Admin
+import com.elico.itschbiblioteca.Admin.Activity_AdminViewPager
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -200,7 +200,7 @@ class Login : AppCompatActivity() {
         if (!localCorreo.equals("2021ff") || !localNombre.equals("2021ff") || !localApellidos.equals("2021ff")
                 || !localControl.equals("2021ff") || !localCarrera.equals("2021ff")) {
             if (localUser.equals("A")) {
-                val intent: Intent = Intent(this, Admin::class.java)
+                val intent: Intent = Intent(this, Activity_AdminViewPager::class.java)
                 startActivity(intent)
                 finish()
             } else {
@@ -224,7 +224,7 @@ class Login : AppCompatActivity() {
 
             if (!user.equals("null")) {
                 if (user == "A") {
-                    val homeIntent = Intent(this, Admin::class.java)
+                    val homeIntent = Intent(this, Activity_AdminViewPager::class.java)
                     startActivity(homeIntent)
                     finish()
 
@@ -396,6 +396,8 @@ class Login : AppCompatActivity() {
         //}
         //}
         //timer.start()
+
+
     }
 }
 
